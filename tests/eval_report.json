@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "total_cases": 1,
+    "evaluated_cases": 1,
+    "skipped_or_error_cases": 0,
+    "metrics": {
+      "AnswerRelevancyMetric": {
+        "avg_score": 0.8333333333333334,
+        "pass_rate": 1.0
+      },
+      "FaithfulnessMetric": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0
+      },
+      "ContextualRelevancyMetric": {
+        "avg_score": 0.0,
+        "pass_rate": 0.0
+      },
+      "Correctness": {
+        "avg_score": 0.8268941433088981,
+        "pass_rate": 1.0
+      }
+    },
+    "page_similarity": {
+      "avg_score": 0.6666666666666667
+    }
+  },
+  "cases": [
+    {
+      "test_id": 1,
+      "question": "Which agencies are part of the first sub-commitment to develop updated public access to research plans?",
+      "categoria": "informes",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 0.8333333333333334,
+          "passed": true,
+          "reason": "The score is 0.83 because the response mostly addresses the question but includes a generic offer for further assistance that doesn't specify which agencies are part of the first sub-commitment, preventing a higher score."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the reasons for irrelevancy highlight that the context only includes metadata and a title unrelated to agencies or sub-commitments for public access to research plans, and there are no relevant statements present."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.8268941433088981,
+          "passed": true,
+          "reason": "The actual output aligns well with the expected output by identifying agencies with over $100 million in R&D budgets coordinating with the NSTC Subcommittee on Open Science to develop updated public access plans. It provides specific examples (NIH, NASA, DOE), which adds detail beyond the expected output. However, it slightly diverges by stating 'typically involved' rather than 'all agencies,' which is a minor omission of completeness."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 0.6666666666666667,
+        "details": [
+          {
+            "expected_documento": "United-States_Results-Report_2022–2024.pdf",
+            "expected_pagina": 7,
+            "matched_documento": "United-States_Results-Report_2022–2024.pdf",
+            "matched_pagina": 8,
+            "distance": 1,
+            "score": 0.6666666666666667
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "page_tolerance": 3
+  }
+}

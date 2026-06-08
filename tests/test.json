@@ -1,0 +1,24 @@
+[
+    {
+    "question": "¿Cómo se pueden transferir datos entre iPad?",
+    "expected_output": "Se puede transferir usando iCloud, iTunes y AirDrop.",
+    "expected_references": [
+        {
+            "source_file": "Apple_iPad_2_Guia_de_usuario.pdf",
+            "page_number": 16,
+            "section_name": "Gestionar el contenido de sus dispositivos iOS",
+            "content": "Puede transferir información y archivos entre el iPad... mediante iCloud o iTunes.",
+        }
+    ],
+    "actual_output": "",
+    "actual_references": [
+        {
+            "source_file": "",
+            "page_number": "",
+            "section_name": "",
+            "content": ""
+        }
+        
+    ]
+}
+]

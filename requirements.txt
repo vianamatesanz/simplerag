@@ -1,0 +1,55 @@
+# Core notebook + RAG stack
+ipykernel
+openai
+deepeval
+
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-text-splitters
+langchain-chroma
+langchain-google-genai
+langchain-huggingface
+langchain-postgres
+langgraph
+langsmith
+
+chromadb
+tiktoken
+pydantic
+typing-extensions
+
+# Retrieval / preprocessing / utilities
+PyMuPDF
+python-dotenv
+PyYAML
+requests
+beautifulsoup4
+pandas
+numpy
+tqdm
+nltk
+unstructured
+python-docx
+
+# Azure integrations used by modules
+azure-identity
+azure-keyvault-secrets
+azure-storage-blob
+msal
+
+# Vector stores / persistence used by modules
+sqlalchemy
+psycopg[binary]
+pgvector
+
+# Optional providers supported by modules.utils
+sentence-transformers
+redis
+langchain-redis
+
+# Windows-only helpers used by some preprocessors
+pywin32; platform_system == "Windows"
+comtypes; platform_system == "Windows"
+pdf2image

@@ -1,0 +1,11 @@
+You are an evaluator analyzing the relevance of a retrieved document with respect to a user's question.
+
+Here is the retrieved document: \n\n{context}\n\n
+
+Here is the user's question: {question}
+
+Evaluate whether the provided content contains any information that could help form an answer
+to the question, even if partially. Look for clues, descriptions, or data that may contribute to
+an understanding of the topic.
+
+Respond with 'sí' if the document is at least partially useful, or 'no' if it's completely irrelevant.

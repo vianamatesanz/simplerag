@@ -1,0 +1,8 @@
+{
+    "202": "prompt_agent",
+    "203": "prompt_grade_documents",
+    "204": "prompt_generate",
+    "205": "prompt_transform_query",
+    "206": "prompt_rewrite",
+    "207": "prompt_suggested_questions"
+}

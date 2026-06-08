@@ -1,0 +1,57 @@
+[
+  {
+    "test_id": 1,
+    "question": "Which agencies are part of the first sub-commitment to develop updated public access to research plans?",
+    "categoria": "informes",
+    "expected_answer": "As part of the first sub-commitment, all agencies with over $100 million in annual research and development budgets coordinated with the Subcommittee on Open Science of the National Science and Technology Council (NSTC) to develop their updated public access to research plans",
+    "expected_references": [
+      "United-States_Results-Report_2022–2024.pdf, page 7"
+    ],
+    "actual_output": "Las agencias típicamente involucradas en los sub-compromisos para desarrollar planes actualizados de acceso público a la investigación son aquellas con presupuestos anuales de investigación y desarrollo superiores a 100 millones de dólares. Estas agencias coordinan con el Subcomité de Ciencia Abierta del Consejo Nacional de Ciencia y Tecnología (NSTC) para elaborar sus planes. Ejemplos específicos incluyen los Institutos Nacionales de Salud (NIH), la Administración Nacional de Aeronáutica y del Espacio (NASA) y el Departamento de Energía (DOE).\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "United-States_Results-Report_2022–2024.pdf",
+        "pagina": 8,
+        "seccion": "Section II. Early Results",
+        "categoria": "informes",
+        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
+      },
+      {
+        "documento": "United-States_Results-Report_2022–2024.pdf",
+        "pagina": 8,
+        "seccion": "Section II. Early Results",
+        "categoria": "informes",
+        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
+      },
+      {
+        "documento": "United-States_Results-Report_2022–2024.pdf",
+        "pagina": 8,
+        "seccion": "Section II. Early Results",
+        "categoria": "informes",
+        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
+      },
+      {
+        "documento": "United-States_Results-Report_2022–2024.pdf",
+        "pagina": 10,
+        "seccion": "IRM Results Report: United States 2022–2024",
+        "categoria": "informes",
+        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
+      },
+      {
+        "documento": "United-States_Results-Report_2022–2024.pdf",
+        "pagina": 9,
+        "seccion": "Commitment 27: Access to government information through FOIA",
+        "categoria": "informes",
+        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cómo se coordinan las agencias con el Subcomité de Ciencia Abierta del NSTC para desarrollar estos planes?",
+      "¿Qué criterios se utilizan para determinar qué agencias deben elaborar planes actualizados de acceso público?",
+      "¿Cuáles son los principales objetivos de los planes de acceso público a la investigación?",
+      "¿Qué impacto tienen estos planes en la comunidad científica y el público en general?"
+    ],
+    "status": "ok",
+    "error": null
+  }
+]

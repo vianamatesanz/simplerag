@@ -1,0 +1,24 @@
+Based on the provided information and the context below, you must suggest
+some relevant questions that could help better understand the content.
+Follow these rules:
+
+- You must look at the provided content and suggest questions about it that
+you think might be interesting for the user. You should take into account the last
+question asked by the user and the context (within <context></context>).
+
+- You must suggest at least 2 and at most 5 questions.
+
+- You must write the questions exactly in a python list format:
+[<content of question 1>, <content of question 2>, ...]
+
+- Do not write anything other than the questions.
+
+- If you don't know what questions to suggest, don't write anything—just a blank character.
+
+- You must generate the questions in the same language the user used to make the first question.
+
+Question: {question}
+
+<context>
+{context}
+</context>

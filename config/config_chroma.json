@@ -1,0 +1,104 @@
+{
+	"models": {
+		"provider": "azure_openai",
+		"huggingface": {
+			"embeddings": {
+				"model": "sentence-transformers/all-MiniLM-L6-v2",
+				"encode_kwargs": {
+					"normalize_embeddings": true
+				}
+			},
+			"llm": {
+				"repo_id": "google/gemma-2-2b-it",
+				"task": "text-generation",
+				"temperature": 0.1,
+				"max_new_tokens": 512,
+				"api_token": "YOUR_HF_TOKEN_HERE"
+			}
+		},
+		"azure_openai": {
+			"endpoint": "https://YOUR_AZURE_ENDPOINT_HERE.openai.azure.com/",
+			"api_key": "YOUR_AZURE_API_KEY_HERE",
+			"api_version": "2024-02-01",
+			"embeddings": {
+				"deployment_name": "text-embedding-3-large"
+			},
+			"llm": {
+				"deployment_name": "gpt-4.1-mini",
+				"temperature": 0
+			}
+		}
+	},
+	"vectorstore": {
+		"provider": "chroma",
+		"chroma": {
+			"collection_name": "testRAG_azure",
+			"persist_directory": "./chroma_db_azure"
+		},
+		"chunking": {
+			"type": "recursive",
+			"chunk_size": 1200,
+			"chunk_overlap": 150,
+			"separators": [
+				"\n\n",
+				"\n",
+				". ",
+				" ",
+				""
+			]
+		}
+	},
+	"retriever": {
+		"search_type": "similarity",
+		"search_kwargs": {
+			"k": 4,
+			"filter": {
+				"categoria": "legal"
+			}
+		}
+	},
+	"rag": {
+            "role_name": "Administrator",
+            "graph": {
+                "orchestrator_id": "orchestrator_a",
+                "languages": ["spanish"],
+                "search_params": {
+                    "search_k": 10,
+                    "similarity_thres": 0.8,
+                    "temperature": 0
+                },
+                "nodes_config": [
+                    {
+                        "node_name": "AgentNode",
+                        "node_description": "Decisión inicial sobre el enrutado del RAG.",
+                        "id_prompt": "202"
+                    },
+                    {
+                        "node_name": "GradeDocumentsNode",
+                        "node_description": "Decidir si los documentos son relevantes para elaborar la respuesta.",
+                        "id_prompt": "203"
+                    },
+                    {
+                        "node_name": "GenerateNode",
+                        "node_description": "Generar respuesta final",
+                        "id_prompt": "204"
+                    },
+                    {
+                        "node_name": "ChangeQuestionNode",
+                        "node_description": "Modificar pregunta desde un inicio si es necesario",
+                        "id_prompt": "205"
+                    },
+                    {
+                        "node_name": "RewriteNode",
+                        "node_description": "Reescribir la pregunta al final si los documentos no son relevantes",
+                        "id_prompt": "206"
+                    },
+                    {
+                        "node_name": "SuggestedQuestionsNode",
+                        "node_description": "Generar las preguntas sugeridas.",
+                        "id_prompt": "207"
+                    }
+                ]
+            }
+		}
+}

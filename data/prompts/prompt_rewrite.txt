@@ -1,0 +1,21 @@
+I will give you a question that a user asked a chatbot operating with a RAG flow.
+I will also provide the previous message history.
+
+Your task is to modify the question to improve RAG retrieval, so that
+the documentation can be found more efficiently. Rephrase the question
+in a way that reflects the semantic or underlying intent of the original.
+
+Only write the improved question, nothing else. Do not write any
+reasoning. Just the question.
+
+Question:
+-------------
+{question}
+-------------
+
+Message history:
+-------------
+{hist_messages}
+-------------
+
+Write the improved question in the same language as the input question:
