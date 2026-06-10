@@ -1,6 +1,8 @@
 import os
 from typing import Any, Dict, Mapping, Optional
 
+import httpx
+
 from langchain_core.embeddings import Embeddings
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
@@ -55,6 +57,32 @@ class LangChainModelFactory:
 
 	def _read_secret(self, value: Optional[str], env_var: str) -> Optional[str]:
 		return value or os.getenv(env_var)
+
+	def _build_http_client(self, provider_cfg: Mapping[str, Any]) -> Optional[httpx.Client]:
+		"""Build optional HTTP client for TLS/proxy customization.
+
+		Supported provider-level keys:
+		- ca_bundle_path: path to corporate/root CA bundle
+		- ssl_no_verify: temporary diagnostic override (default false)
+		
+		Environment fallback:
+		- REQUESTS_CA_BUNDLE
+		- SSL_CERT_FILE
+		"""
+		ssl_no_verify = bool(provider_cfg.get("ssl_no_verify", False))
+		ca_bundle_path = (
+			provider_cfg.get("ca_bundle_path")
+			or os.getenv("REQUESTS_CA_BUNDLE")
+			or os.getenv("SSL_CERT_FILE")
+		)
+
+		if ssl_no_verify:
+			return httpx.Client(verify=False, timeout=120.0)
+
+		if ca_bundle_path:
+			return httpx.Client(verify=ca_bundle_path, timeout=120.0)
+
+		return None
 
 	def _build_huggingface_embeddings(self) -> Embeddings:
 		hf_cfg = self._provider_config("huggingface")
@@ -123,6 +151,9 @@ class LangChainModelFactory:
 			"api_version": api_version,
 			"chunk_size": emb_cfg.get("chunk_size", 1000),
 		}
+		http_client = self._build_http_client(azure_cfg)
+		if http_client is not None:
+			kwargs["http_client"] = http_client
 		if model:
 			kwargs["model"] = model
 		if deployment:
@@ -158,6 +189,9 @@ class LangChainModelFactory:
 			"api_version": api_version,
 			"temperature": llm_cfg.get("temperature", 0),
 		}
+		http_client = self._build_http_client(azure_cfg)
+		if http_client is not None:
+			kwargs["http_client"] = http_client
 		if model:
 			kwargs["model"] = model
 		if deployment:

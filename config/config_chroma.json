@@ -17,9 +17,11 @@
 			}
 		},
 		"azure_openai": {
-			"endpoint": "https://YOUR_AZURE_ENDPOINT_HERE.openai.azure.com/",
-			"api_key": "YOUR_AZURE_API_KEY_HERE",
+			"endpoint": "https://YOUR_AZURE_OPENAI_SERVICE.openai.azure.com/",
+			"api_key": "YOUR_API_KEY_HERE",
 			"api_version": "2024-02-01",
+			"ca_bundle_path": "",
+			"ssl_no_verify": false,
 			"embeddings": {
 				"deployment_name": "text-embedding-3-large"
 			},
