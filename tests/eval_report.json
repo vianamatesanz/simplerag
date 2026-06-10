@@ -1,28 +1,28 @@
 {
   "summary": {
-    "total_cases": 1,
-    "evaluated_cases": 1,
+    "total_cases": 10,
+    "evaluated_cases": 10,
     "skipped_or_error_cases": 0,
     "metrics": {
       "AnswerRelevancyMetric": {
-        "avg_score": 0.8333333333333334,
-        "pass_rate": 1.0
+        "avg_score": 0.8477564102564102,
+        "pass_rate": 0.9
       },
       "FaithfulnessMetric": {
         "avg_score": 1.0,
         "pass_rate": 1.0
       },
       "ContextualRelevancyMetric": {
-        "avg_score": 0.0,
-        "pass_rate": 0.0
+        "avg_score": 0.075,
+        "pass_rate": 0.1
       },
       "Correctness": {
-        "avg_score": 0.8268941433088981,
-        "pass_rate": 1.0
+        "avg_score": 0.6202578360522671,
+        "pass_rate": 0.7
       }
     },
     "page_similarity": {
-      "avg_score": 0.6666666666666667
+      "avg_score": 0.8333333333333334
     }
   },
   "cases": [
@@ -36,7 +36,7 @@
           "name": "AnswerRelevancyMetric",
           "score": 0.8333333333333334,
           "passed": true,
-          "reason": "The score is 0.83 because the response mostly addresses the question but includes a generic offer for further assistance that doesn't specify which agencies are part of the first sub-commitment, preventing a higher score."
+          "reason": "The score is 0.83 because the response mostly addresses the question about agencies involved in the first sub-commitment, but it includes a generic offer for further help that does not directly relate to the specific inquiry, preventing a higher score."
         },
         {
           "name": "FaithfulnessMetric",
@@ -48,13 +48,13 @@
           "name": "ContextualRelevancyMetric",
           "score": 0.0,
           "passed": false,
-          "reason": "The score is 0.00 because the reasons for irrelevancy highlight that the context only includes metadata and a title unrelated to agencies or sub-commitments for public access to research plans, and there are no relevant statements present."
+          "reason": "The score is 0.00 because the reasons for irrelevancy state that the retrieval context only contains metadata and titles, such as 'IRM Results Report: United States 2022–2024', which do not provide information about agencies or sub-commitments related to public access to research plans, and there are no relevant statements in the retrieval context."
         },
         {
           "name": "Correctness",
-          "score": 0.8268941433088981,
+          "score": 0.8125496731662256,
           "passed": true,
-          "reason": "The actual output aligns well with the expected output by identifying agencies with over $100 million in R&D budgets coordinating with the NSTC Subcommittee on Open Science to develop updated public access plans. It provides specific examples (NIH, NASA, DOE), which adds detail beyond the expected output. However, it slightly diverges by stating 'typically involved' rather than 'all agencies,' which is a minor omission of completeness."
+          "reason": "The actual output aligns well with the expected output by identifying agencies with over $100 million in R&D budgets coordinating with the NSTC Subcommittee on Open Science to develop updated public access plans. It provides specific examples (NIH, NASA, DOE), which adds detail beyond the expected output. There is no contradiction, but the actual output slightly expands beyond the expected phrasing, which is acceptable. The closing question is extraneous but does not detract from factual accuracy."
         }
       ],
       "page_similarity": {
@@ -67,6 +67,411 @@
             "matched_pagina": 8,
             "distance": 1,
             "score": 0.6666666666666667
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 2,
+      "question": "Quiero comprar un Dodge Charger, ¿qué opciones de motor tiene?",
+      "categoria": "misc",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 0.8461538461538461,
+          "passed": true,
+          "reason": "The score is 0.85 because the response mostly addresses the engine options for the Dodge Charger, but it includes irrelevant details about battery design and PowerShot features that do not pertain to the question about engine options."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because all provided reasons indicate irrelevancy, such as 'section=Chevrolet Traverse' and 'section=Ford Maverick' which do not relate to Dodge Charger motor options, and the metadata 'source_file=Consumer Reports April 2025.pdf; page=18; section=WHAT’S NEW … WHAT’S NEXT' offers no relevant information."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.31899222225571033,
+          "passed": false,
+          "reason": "The actual output provides detailed and specific information about Dodge Charger motor options, including electric and gasoline versions, which is more detailed than the expected output. However, it introduces facts not present in the expected output and omits mention of the two- and four-door configurations and the context of appealing to muscle car enthusiasts. There is no direct contradiction, but the omission of key expected details and addition of unsupported specifics leads to a low score."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Consumer Reports April 2025.pdf",
+            "expected_pagina": 18,
+            "matched_documento": "Consumer Reports April 2025.pdf",
+            "matched_pagina": 18,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 3,
+      "question": "Cada cuánto debe reunirse el Régimen de funcionamiento del Consejo Rector",
+      "categoria": "legal",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response fully addresses the question about the meeting frequency of the Régimen de funcionamiento del Consejo Rector without including any irrelevant information. It is clear, concise, and directly relevant."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the reasons for irrelevancy state that the retrieval context only provides metadata such as 'source_file=Disposición 12036 del BOE núm. 137 de 2026.pdf; page=13; section=BOLETÍN OFICIAL DEL ESTADO' and contains no information about the frequency of meetings of the Régimen de funcionamiento del Consejo Rector, and there are no relevant statements in the retrieval context."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.862245933820551,
+          "passed": true,
+          "reason": "The actual output accurately reflects the key facts from the expected output, including the minimum of two ordinary meetings per year and the presidency's authority to call extraordinary meetings as needed, either on their own initiative or at the request of a quarter of the vocal members. The only minor omission is the explicit mention that the presidency 'acordar la celebración' (agrees to hold) the meetings, but this does not contradict the expected facts. The additional polite closing does not affect factual alignment."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Régimen de funcionamiento del Consejo Rector.pdf",
+            "expected_pagina": 14,
+            "matched_documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+            "matched_pagina": 14,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 4,
+      "question": "¿Cuáles son las desventajas del modelo neuronal HH?",
+      "categoria": "research",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response fully addresses the question about the disadvantages of the HH neural model without including any irrelevant information. It is clear, concise, and directly relevant to the input."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because none of the retrieval context statements, such as 'Each of these models is characterized by a set of' and 'Biological plausibility,' provide any information about the disadvantages of the HH neuronal model, making the context completely irrelevant."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.1320821300824607,
+          "passed": false,
+          "reason": "The actual output contradicts the expected output by stating the HH model is computationally expensive, while the expected output claims it is the least computationally expensive. Additionally, the actual output omits specific quantitative details about operations per update and lacks the referenced source, resulting in significant omission of detail."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 0.6666666666666667,
+        "details": [
+          {
+            "expected_documento": "fncom-17-1215824.pdf",
+            "expected_pagina": 15,
+            "matched_documento": "fncom-17-1215824.pdf",
+            "matched_pagina": 16,
+            "distance": 1,
+            "score": 0.6666666666666667
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 5,
+      "question": "¿Qué son los gestos multitarea en el iPad?",
+      "categoria": "manuales",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response fully addresses the question about multitasking gestures on the iPad without including any irrelevant information. It is clear, concise, and directly relevant to the input."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the reasons for irrelevancy include statements like 'Acercar o alejar la imagen' and 'Utilizar el rotor de VoiceOver' which do not relate to 'gestos multitarea en el iPad', and there are no relevant statements in the retrieval context to support the input question."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.8622459324198198,
+          "passed": true,
+          "reason": "The actual output accurately describes the multitasking gestures on the iPad without contradicting the expected output. It includes all key gestures mentioned in the expected output and adds details about enabling/disabling gestures, which is relevant and enhances completeness. The only minor omission is the lack of a direct citation to the source, but this is not required. Overall, the response is detailed, factual, and aligned with the evaluation criteria."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+            "expected_pagina": 23,
+            "matched_documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+            "matched_pagina": 23,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 6,
+      "question": "¿Cómo se pueden transferir datos entre iPad?",
+      "categoria": "manuales",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response fully addresses the question about transferring data between iPads without including any irrelevant information. It is clear, concise, and directly relevant to the input."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.25,
+          "passed": false,
+          "reason": "The score is 0.25 because the relevant statement 'Conectar el iPad al ordenador' provides a partial method for data transfer, but the majority of the context consists of section titles like 'Gestionar el contenido de sus dispositivos iOS' and 'Transferir archivos' that lack detailed instructions, limiting overall relevancy."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.8904650528674172,
+          "passed": true,
+          "reason": "The actual output aligns well with the expected output by listing iCloud, iTunes, and AirDrop as transfer methods without contradicting any facts. It provides additional relevant details and examples, enhancing completeness rather than omitting key information. The inclusion of email as an extra method is not contradictory but adds helpful context."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+            "expected_pagina": 16,
+            "matched_documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+            "matched_pagina": 16,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 7,
+      "question": "QUé cobertura de seguro médico se ofrece a los empleados?",
+      "categoria": "misc",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 0.9230769230769231,
+          "passed": true,
+          "reason": "The score is 0.92 because the response effectively addresses the medical insurance coverage offered to employees, but it includes a procedural detail about enrollment via email that is not directly related to the coverage itself, preventing a perfect score."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.5,
+          "passed": true,
+          "reason": "The score is 0.50 because while the relevant statements confirm that 'All employees in the United States of America are eligible for medical insurance,' the majority of the context consists of irrelevant metadata such as 'source_file=Apple_iPad_2_Guia_de_usuario.pdf; page=132; section=Aplicaciones' which does not address medical insurance coverage."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.7651188208532869,
+          "passed": true,
+          "reason": "The actual output aligns well with the expected output by accurately detailing coverage for employees, spouses, and dependents up to 21 years, coverage extension to 25 years for students, and special needs children coverage without age limit. It does not contradict any expected facts but includes significantly more detail, which is not penalized. The omission penalty is minimal since all key expected facts are present, and the additional information enhances completeness without contradiction."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Benefits Guide doc.pdf",
+            "expected_pagina": 1,
+            "matched_documento": "Benefits Guide Doc.pdf",
+            "matched_pagina": 1,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 8,
+      "question": "Qué cobertura de seguro hay en caso de fallecimiento del empleado?",
+      "categoria": "misc",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 0.375,
+          "passed": false,
+          "reason": "The score is 0.38 because while the response includes some relevant information about death insurance coverage, it is diluted by multiple irrelevant statements about age limits for children, coverage for special needs children, and medical coverage for dependents of retirees. These off-topic details reduce the overall relevancy to the specific question about employee death insurance coverage."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the reasons for irrelevancy highlight that the retrieval context only mentions eligibility for medical insurance and metadata, none of which address coverage in case of employee death, as the input question requires."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.6648872595486249,
+          "passed": true,
+          "reason": "The actual output provides detailed information about death insurance coverage for employees and medical coverage for dependents, including age limits for children, which aligns with the expected output's focus on medical coverage for orphaned children up to 21 or 25 years if studying. However, the actual output includes additional details about coverage for spouses, retirees, and special needs children that are not mentioned in the expected output, which is acceptable. There is no contradiction, but the actual output omits the specific mention of 'widow death' and the source reference, and it slightly shifts focus from orphaned children to all dependents, leading to partial omission of the expected detail."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Benefits Guide doc.pdf",
+            "expected_pagina": 1,
+            "matched_documento": "Benefits Guide Doc.pdf",
+            "matched_pagina": 1,
+            "distance": 0,
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 9,
+      "question": "¿Cuál es el plazo para resolver un recurso de alzada?",
+      "categoria": "manuales",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 0.5,
+          "passed": true,
+          "reason": "The score is 0.50 because the response includes information about who should resolve the appeal and a generic closing question, neither of which directly address the specific deadline for resolving an appeal. However, it partially relates to the topic, which justifies the mid-level score."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because all reasons indicate that the retrieval context only contains metadata and headers like 'BOLETÍN OFICIAL DEL ESTADO' without any information about the 'plazo para resolver un recurso de alzada', and there are no relevant statements present."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The actual output addresses a question about the deadline for resolving a recurso de alzada, while the expected output discusses energy-saving states of a laptop, which are unrelated topics. This represents a complete omission of the expected detail and a contradiction in subject matter."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 0.0,
+        "details": [
+          {
+            "expected_documento": "Guía del usuario del PC portátil HP.pdf",
+            "expected_pagina": 71,
+            "matched_documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+            "matched_pagina": 25,
+            "distance": 46,
+            "score": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": 10,
+      "question": "¿En qué consiste el paso de filtrado en el proceso de scheduling de Kubernetes?",
+      "categoria": "manuales",
+      "status": "evaluated",
+      "metrics": [
+        {
+          "name": "AnswerRelevancyMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response fully addresses the question about the filtering step in Kubernetes scheduling without including any irrelevant information."
+        },
+        {
+          "name": "FaithfulnessMetric",
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output fully aligns with the retrieval context. Great job maintaining accuracy!"
+        },
+        {
+          "name": "ContextualRelevancyMetric",
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the retrieval context only contains metadata such as 'source_file=Scheduling, Preemption and Eviction _ Kubernetes.pdf; page=4; section=What's next' and no actual content explaining the filtering step in Kubernetes scheduling, making it completely irrelevant to the input question."
+        },
+        {
+          "name": "Correctness",
+          "score": 0.8939913355085751,
+          "passed": true,
+          "reason": "The actual output accurately describes the filtering step in Kubernetes scheduling, including the key example of PodFitsResources and the outcome of the node list after filtering. It does not contradict any facts in the expected output and provides slightly more detail about the scheduler evaluating each node. The omission of the note that there are often multiple suitable nodes is minor and does not significantly reduce alignment."
+        }
+      ],
+      "page_similarity": {
+        "avg_page_similarity": 1.0,
+        "details": [
+          {
+            "expected_documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+            "expected_pagina": 4,
+            "matched_documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+            "matched_pagina": 4,
+            "distance": 0,
+            "score": 1.0
           }
         ]
       }

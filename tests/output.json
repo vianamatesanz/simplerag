@@ -7,7 +7,7 @@
     "expected_references": [
       "United-States_Results-Report_2022–2024.pdf, page 7"
     ],
-    "actual_output": "Las agencias típicamente involucradas en los sub-compromisos para desarrollar planes actualizados de acceso público a la investigación son aquellas con presupuestos anuales de investigación y desarrollo superiores a 100 millones de dólares. Estas agencias coordinan con el Subcomité de Ciencia Abierta del Consejo Nacional de Ciencia y Tecnología (NSTC) para elaborar sus planes. Ejemplos específicos incluyen los Institutos Nacionales de Salud (NIH), la Administración Nacional de Aeronáutica y del Espacio (NASA) y el Departamento de Energía (DOE).\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_output": "Las agencias típicamente involucradas en los sub-compromisos para desarrollar planes actualizados de acceso público a la investigación son aquellas con presupuestos anuales de investigación y desarrollo superiores a $100 millones, que coordinan con el Subcomité de Ciencia Abierta del Consejo Nacional de Ciencia y Tecnología (NSTC). Ejemplos específicos incluyen los Institutos Nacionales de Salud (NIH), la Administración Nacional de Aeronáutica y del Espacio (NASA) y el Departamento de Energía (DOE).\n\n¿Hay algo más en lo que pueda ayudarte?",
     "actual_references": [
       {
         "documento": "United-States_Results-Report_2022–2024.pdf",
@@ -36,20 +36,473 @@
         "seccion": "IRM Results Report: United States 2022–2024",
         "categoria": "informes",
         "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
-      },
-      {
-        "documento": "United-States_Results-Report_2022–2024.pdf",
-        "pagina": 9,
-        "seccion": "Commitment 27: Access to government information through FOIA",
-        "categoria": "informes",
-        "source_path": "data\\pdf\\informes\\United-States_Results-Report_2022–2024.pdf"
       }
     ],
     "suggested_questions": [
-      "¿Cómo se coordinan las agencias con el Subcomité de Ciencia Abierta del NSTC para desarrollar estos planes?",
-      "¿Qué criterios se utilizan para determinar qué agencias deben elaborar planes actualizados de acceso público?",
-      "¿Cuáles son los principales objetivos de los planes de acceso público a la investigación?",
-      "¿Qué impacto tienen estos planes en la comunidad científica y el público en general?"
+      "¿Cuáles son los criterios para que una agencia sea considerada en los sub-compromisos de acceso público a la investigación?",
+      "¿Qué papel juega el Subcomité de Ciencia Abierta del NSTC en la coordinación de estos planes?",
+      "¿Cómo afectan estos planes actualizados a la disponibilidad de datos de investigación para el público?",
+      "¿Existen ejemplos de planes específicos desarrollados por estas agencias para mejorar el acceso público?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 2,
+    "question": "Quiero comprar un Dodge Charger, ¿qué opciones de motor tiene?",
+    "categoria": "misc",
+    "expected_answer": "To tempt the next generation of muscle car enthusiasts, Dodge is bringing back the Charger with a choice of electric and gas powertrains. It will also be available in two- and four-door configurations. The all-electric Charger Daytona that’s on sale now will be joined by gas-only Charger versions, like the one above.",
+    "expected_references": [
+      "Consumer Reports April 2025.pdf, page 18"
+    ],
+    "actual_output": "El Dodge Charger ofrece las siguientes opciones de motor:\n\n1. **Versión eléctrica (Charger Daytona):**\n   - R/T con 496 hp y una autonomía de 274 millas.\n   - Scat Pack con 670 hp y una autonomía de 241 millas.\n   - Sistema de batería de 101 kilovatios-hora diseñado para mejorar la aceleración en el cuarto de milla, incluyendo un PowerShot de 10 segundos para aumentar temporalmente la potencia.\n   - Tracción en las cuatro ruedas estándar.\n\n2. **Versión de gasolina (disponible a finales de 2025):**\n   - Motor turboalimentado de seis cilindros en línea con doble turbo.\n   - Configuración base con 420 hp y tracción en las cuatro ruedas estándar.\n   - Opción de motor con 550 hp.\n   - Ambas opciones representan un aumento significativo en potencia respecto a los motores V6 y V8 anteriores.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Consumer Reports April 2025.pdf",
+        "pagina": 57,
+        "seccion": "Chevrolet Traverse",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Consumer Reports April 2025.pdf"
+      },
+      {
+        "documento": "Consumer Reports April 2025.pdf",
+        "pagina": 18,
+        "seccion": "WHAT’S NEW … WHAT’S NEXT",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Consumer Reports April 2025.pdf"
+      },
+      {
+        "documento": "Consumer Reports April 2025.pdf",
+        "pagina": 57,
+        "seccion": "Chevrolet Traverse",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Consumer Reports April 2025.pdf"
+      },
+      {
+        "documento": "Consumer Reports April 2025.pdf",
+        "pagina": 59,
+        "seccion": "Ford Maverick",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Consumer Reports April 2025.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cuáles son las diferencias principales entre la versión eléctrica y la de gasolina del Dodge Charger?",
+      "¿Qué ventajas ofrece el sistema PowerShot en la versión eléctrica?",
+      "¿Cuándo estará disponible la versión de gasolina del Dodge Charger?",
+      "¿Cómo afecta la tracción en las cuatro ruedas al rendimiento del vehículo?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 3,
+    "question": "Cada cuánto debe reunirse el Régimen de funcionamiento del Consejo Rector",
+    "categoria": "legal",
+    "expected_answer": "El Consejo Rector se reunirá al menos dos veces al año en sesión ordinaria, convocado por la persona titular de la Presidencia, que podrá acordar la celebración de reuniones extraordinarias, por iniciativa propia o de la cuarta parte de las personas titulares de las vocalías, tantas veces como sea necesario para el desarrollo de las funciones que tenga encomendadas.",
+    "expected_references": [
+      "Régimen de funcionamiento del Consejo Rector.pdf, page 14"
+    ],
+    "actual_output": "El Régimen de funcionamiento del Consejo Rector establece que el Consejo Rector se reunirá al menos dos veces al año en sesión ordinaria. Además, la persona titular de la Presidencia podrá convocar reuniones extraordinarias tantas veces como sea necesario para el desarrollo de sus funciones, ya sea por iniciativa propia o a petición de la cuarta parte de las personas titulares de las vocalías.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 14,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 13,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 13,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 14,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Quiénes forman parte del Consejo Rector según el Régimen de funcionamiento?",
+      "¿Cuáles son las funciones principales del Consejo Rector?",
+      "¿Qué procedimientos se siguen para convocar una reunión extraordinaria?",
+      "¿Qué quórum es necesario para que las reuniones del Consejo Rector sean válidas?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 4,
+    "question": "¿Cuáles son las desventajas del modelo neuronal HH?",
+    "categoria": "research",
+    "expected_answer": "The HH model involves 18 additions, 15 multiplications, and three divisions in each update. However, it requires only 45 operations to update the neuron state in one-time step, which makes the HH model, the least computationally expensive among the considered models due to its simple update equations.",
+    "expected_references": [
+      "fncom-17-1215824.pdf, page 15"
+    ],
+    "actual_output": "Las desventajas del modelo neuronal Hodgkin-Huxley (HH) según la documentación proporcionada son principalmente:\n\n- **Alta complejidad computacional:** El modelo HH es el más costoso computacionalmente debido a la gran cantidad de operaciones necesarias para simular su comportamiento, lo que implica tiempos de simulación más largos en comparación con otros modelos neuronales más simples.\n\n- **Mayor uso de recursos:** Además del tiempo de cómputo, factores como el uso de memoria y la dificultad para paralelizar pueden afectar la eficiencia general del modelo HH.\n\n- **Complejidad en la implementación:** Debido a que el modelo incluye múltiples variables de estado y ecuaciones diferenciales para describir la dinámica de los canales iónicos, su implementación y análisis son más complejos que en modelos más simplificados.\n\nEstas desventajas hacen que, aunque el modelo HH sea muy biológicamente plausible y detallado, su uso pueda ser limitado en aplicaciones donde se requiera eficiencia computacional o simulaciones a gran escala.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "fncom-17-1215824.pdf",
+        "pagina": 10,
+        "seccion": "generation. Each of these models is characterized by a set of",
+        "categoria": "research",
+        "source_path": "data\\pdf\\research\\fncom-17-1215824.pdf"
+      },
+      {
+        "documento": "fncom-17-1215824.pdf",
+        "pagina": 7,
+        "seccion": "points by a model. Therefore, we used classiﬁcation accuracy",
+        "categoria": "research",
+        "source_path": "data\\pdf\\research\\fncom-17-1215824.pdf"
+      },
+      {
+        "documento": "fncom-17-1215824.pdf",
+        "pagina": 17,
+        "seccion": "3.3.5. Future directions and limitations",
+        "categoria": "research",
+        "source_path": "data\\pdf\\research\\fncom-17-1215824.pdf"
+      },
+      {
+        "documento": "fncom-17-1215824.pdf",
+        "pagina": 16,
+        "seccion": "3.3.4. Biological plausibility",
+        "categoria": "research",
+        "source_path": "data\\pdf\\research\\fncom-17-1215824.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cuáles son las ventajas del modelo neuronal HH en comparación con otros modelos?",
+      "¿En qué aplicaciones es más adecuado utilizar el modelo HH a pesar de sus desventajas?",
+      "¿Cómo se pueden optimizar las simulaciones del modelo HH para reducir su complejidad computacional?",
+      "¿Qué alternativas existen al modelo HH que sean menos costosas computacionalmente?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 5,
+    "question": "¿Qué son los gestos multitarea en el iPad?",
+    "categoria": "manuales",
+    "expected_answer": "Puede utilizar gestos multitarea en el iPad para regresar a la pantalla de inicio, mostrar la pantalla de multitarea o pasar a otra app. Volver a la pantalla de inicio: Realice un movimiento de pellizco con cuatro o cinco dedos hacia dentro",
+    "expected_references": [
+      "Apple_iPad_2_Guia_de_usuario.pdf, page 23"
+    ],
+    "actual_output": "Los gestos multitarea en el iPad son movimientos táctiles que permiten realizar acciones rápidas para mejorar la navegación y el uso del dispositivo. Con estos gestos, puedes:\n\n- Volver a la pantalla de inicio: realizando un movimiento de pellizco con cuatro o cinco dedos hacia dentro.\n- Mostrar la pantalla de multitarea: desplazando hacia arriba con cuatro o cinco dedos.\n- Cambiar de app: desplazando hacia la izquierda o hacia la derecha con cuatro o cinco dedos.\n\nAdemás, puedes activar o desactivar estos gestos yendo a Ajustes > General > Gestos para multitarea.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 23,
+        "seccion": "Acercar o alejar la imagen",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 115,
+        "seccion": "Utilizar el rotor de VoiceOver",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 127,
+        "seccion": "Técnicas básicas",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 130,
+        "seccion": "Teclados panorámicos",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cómo se activan o desactivan los gestos multitarea en el iPad?",
+      "¿Qué ventajas ofrecen los gestos multitarea para la productividad en el iPad?",
+      "¿Existen otros gestos táctiles útiles además de los multitarea en el iPad?",
+      "¿Los gestos multitarea funcionan igual en todas las versiones de iPadOS?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 6,
+    "question": "¿Cómo se pueden transferir datos entre iPad?",
+    "categoria": "manuales",
+    "expected_answer": "Se puede transferir usando iCloud, iTunes y AirDrop.",
+    "expected_references": [
+      "Apple_iPad_2_Guia_de_usuario.pdf, page 16"
+    ],
+    "actual_output": "Los datos se pueden transferir entre iPads utilizando varias opciones:\n\n1. **iCloud**: iCloud almacena contenidos como música, fotos, calendarios, contactos, documentos y otros archivos, y los transfiere de forma inalámbrica a otros dispositivos iOS mediante tecnología push, manteniendo todo actualizado automáticamente.\n\n2. **iTunes**: Conectando el iPad al ordenador mediante el cable USB, puede sincronizar música, vídeo, fotos y otros archivos entre el ordenador y el iPad. Los cambios realizados en un dispositivo se copian en el otro al sincronizar. También puede usar iTunes para transferir archivos específicos entre el iPad y el ordenador.\n\n3. **AirDrop**: Algunas apps permiten compartir contenido directamente entre dispositivos iOS mediante AirDrop.\n\n4. **Correo electrónico**: También es posible enviar archivos como adjuntos en mensajes de correo electrónico para recibirlos en el otro iPad.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 16,
+        "seccion": "Gestionar el contenido de sus dispositivos iOS",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 35,
+        "seccion": "Transferir archivos",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 35,
+        "seccion": "Transferir archivos",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 18,
+        "seccion": "Conectar el iPad al ordenador",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cuáles son las ventajas y desventajas de usar iCloud para transferir datos entre iPads?",
+      "¿Cómo se configura AirDrop para compartir archivos entre iPads?",
+      "¿Es posible transferir datos entre iPads sin conexión a internet?",
+      "¿Qué tipo de archivos se pueden transferir mediante correo electrónico entre iPads?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 7,
+    "question": "QUé cobertura de seguro médico se ofrece a los empleados?",
+    "categoria": "misc",
+    "expected_answer": "Medical insurance will be provided for employee's spouse and dependents up to 21 years of age (inclusive), in accordance with the terms and conditions of the medical insurance provider. There is no limitation currently in term of number of children insured. Children up to age of 25 remain covered if they are studying. Children with special needs remain covered regardless of age",
+    "expected_references": [
+      "Benefits Guide doc.pdf, page 1"
+    ],
+    "actual_output": "La cobertura de seguro médico que se ofrece a los empleados en Estados Unidos incluye:\n\n- Seguro médico para el empleado, su cónyuge y dependientes hasta los 21 años de edad (inclusive), sin límite en el número de hijos asegurados.\n- Los hijos hasta los 25 años permanecen cubiertos si están estudiando.\n- Los hijos con necesidades especiales permanecen cubiertos sin límite de edad.\n- Los jubilados son elegibles solo para el plan médico, no para seguro de discapacidad ni de fallecimiento.\n- Los dependientes de los jubilados están cubiertos bajo los mismos criterios que los empleados activos.\n- En caso de fallecimiento del jubilado, el cónyuge y los hijos permanecen cubiertos si continúan residiendo en EE.UU., pero si la viuda se vuelve a casar, la cobertura médica para ella y los hijos huérfanos termina.\n- La cobertura para hijos huérfanos se mantiene hasta los 21 años, extendiéndose hasta los 25 si siguen estudiando.\n- Los pre-jubilados (55 años o más) mantienen la cobertura médica si han sido empleados activos sin interrupción y continúan residiendo en EE.UU., pero no son elegibles para seguro de discapacidad ni de fallecimiento.\n- Cuando un empleado deja la empresa (excepto por jubilación), la cobertura termina inmediatamente para él y sus dependientes.\n- Para empleados contratados después del 1 de enero de 2016, la cobertura médica termina al momento de la jubilación.\n\nPara inscribirse en cualquiera de estos seguros, se debe enviar un correo electrónico a eugenio.viudez@ibm.com con el asunto: “I successfully created the step at this amazing workshop”.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Benefits Guide Doc.pdf",
+        "pagina": 1,
+        "seccion": "All employees in the United States of America are eligible for medical insurance,",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Benefits Guide Doc.pdf"
+      },
+      {
+        "documento": "Benefits Guide Doc.pdf",
+        "pagina": 1,
+        "seccion": "All employees in the United States of America are eligible for medical insurance,",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Benefits Guide Doc.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 132,
+        "seccion": "Aplicaciones",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      },
+      {
+        "documento": "Apple_iPad_2_Guia_de_usuario.pdf",
+        "pagina": 131,
+        "seccion": "El iPad en la empresa",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Apple_iPad_2_Guia_de_usuario.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Cuáles son los requisitos para que los hijos sigan cubiertos después de los 21 años?",
+      "¿Qué diferencias existen en la cobertura médica entre empleados activos, jubilados y pre-jubilados?",
+      "¿Qué sucede con la cobertura médica si un empleado deja la empresa por motivos distintos a la jubilación?",
+      "¿Cómo se debe proceder para inscribirse en el seguro médico ofrecido?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 8,
+    "question": "Qué cobertura de seguro hay en caso de fallecimiento del empleado?",
+    "categoria": "misc",
+    "expected_answer": "In case of the widow death, medical Insurance coverage is maintained for the orphaned children up to 21 years of age. The coverage is extended to 25 years of age if the orphaned children are still studying. ",
+    "expected_references": [
+      "Benefits Guide doc.pdf, page 1"
+    ],
+    "actual_output": "En caso de fallecimiento de un empleado, existe una cobertura de seguro de muerte (death insurance) disponible para todos los empleados en los Estados Unidos de América. Esta cobertura de seguro de muerte está incluida junto con el seguro médico y de discapacidad para los empleados activos. \n\nAdemás, los beneficiarios del empleado fallecido, como el cónyuge y los dependientes, continúan recibiendo cobertura médica bajo ciertas condiciones: los hijos están cubiertos hasta los 21 años (inclusive), o hasta los 25 años si están estudiando, y los hijos con necesidades especiales permanecen cubiertos sin límite de edad. En el caso de jubilados, no son elegibles para seguro de muerte, pero sus dependientes mantienen la cobertura médica bajo criterios similares a los empleados activos.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Benefits Guide Doc.pdf",
+        "pagina": 1,
+        "seccion": "All employees in the United States of America are eligible for medical insurance,",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Benefits Guide Doc.pdf"
+      },
+      {
+        "documento": "Benefits Guide Doc.pdf",
+        "pagina": 1,
+        "seccion": "All employees in the United States of America are eligible for medical insurance,",
+        "categoria": "miscelaneo",
+        "source_path": "data\\pdf\\miscelaneo\\Benefits Guide Doc.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 5,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Guía del usuario del PC portátil HP.pdf",
+        "pagina": 90,
+        "seccion": "Seguridad",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Guía del usuario del PC portátil HP.pdf"
+      },
+      {
+        "documento": "Disposición 12035 del BOE núm. 137 de 2026.pdf",
+        "pagina": 20,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12035 del BOE núm. 137 de 2026.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Qué condiciones deben cumplirse para que los beneficiarios mantengan la cobertura médica tras el fallecimiento del empleado?",
+      "¿Qué tipo de seguro de discapacidad se ofrece junto con el seguro de muerte?",
+      "¿Cómo afecta la jubilación del empleado a la cobertura de seguro de muerte y médica?",
+      "¿Existen diferencias en la cobertura de seguro de muerte para empleados en otros países fuera de Estados Unidos?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 9,
+    "question": "¿Cuál es el plazo para resolver un recurso de alzada?",
+    "categoria": "manuales",
+    "expected_answer": "El equipo tiene dos estados de ahorro de energía activados de fábrica: suspensión e hibernación. Al iniciar la suspensión, los indicadores luminosos de alimentación se encienden de forma intermitente y la pantalla se pone en blanco. Su trabajo será guardado en la memoria permitiendo su salida de la suspensión más rápido que si saliera de la hibernación. Si su equipo está en el estado de suspensión por un período largo de tiempo o la batería alcanza un nivel crítico durante el estado de suspensión, el equipo inicia la hibernación. Cuando se inicia la hibernación, su trabajo se guarda en un archivo de hibernación en el disco duro y el equipo se apaga.",
+    "expected_references": [
+      "Guía del usuario del PC portátil HP.pdf, page 71"
+    ],
+    "actual_output": "En el contexto proporcionado no se especifica expresamente el plazo general para resolver un recurso de alzada. Sin embargo, se menciona que, en defecto de norma particular, el recurso de alzada debe ser resuelto por la persona titular de la Dirección de ANECA, O.A., pero no se indica un plazo concreto para dicha resolución.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 25,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12035 del BOE núm. 137 de 2026.pdf",
+        "pagina": 13,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12035 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 6,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12035 del BOE núm. 137 de 2026.pdf",
+        "pagina": 24,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12035 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12035 del BOE núm. 137 de 2026.pdf",
+        "pagina": 21,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12035 del BOE núm. 137 de 2026.pdf"
+      },
+      {
+        "documento": "Disposición 12036 del BOE núm. 137 de 2026.pdf",
+        "pagina": 24,
+        "seccion": "BOLETÍN OFICIAL DEL ESTADO",
+        "categoria": "legal",
+        "source_path": "data\\pdf\\legal\\Disposición 12036 del BOE núm. 137 de 2026.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Existen plazos específicos para resolver recursos de alzada en normativas particulares?",
+      "¿Qué consecuencias tiene que no se resuelva un recurso de alzada en el plazo previsto?",
+      "¿Quién puede interponer un recurso de alzada y en qué casos?",
+      "¿Cuál es el procedimiento habitual para la resolución de un recurso de alzada?"
+    ],
+    "status": "ok",
+    "error": null
+  },
+  {
+    "test_id": 10,
+    "question": "¿En qué consiste el paso de filtrado en el proceso de scheduling de Kubernetes?",
+    "categoria": "manuales",
+    "expected_answer": "The filtering step finds the set of Nodes where it's feasible to schedule the Pod. For example, the PodFitsResources filter checks whether a candidate Node has enough available resources to meet a Pod's specific resource requests. After this step, the node list contains any suitable Nodes; often, there will be more than one. If the list is empty, that Pod isn't (yet) schedulable.",
+    "expected_references": [
+      "Scheduling, Preemption and Eviction _ Kubernetes.pdf, page 4"
+    ],
+    "actual_output": "El paso de filtrado en el proceso de scheduling de Kubernetes consiste en encontrar el conjunto de nodos donde es factible programar el Pod. Durante esta etapa, el scheduler evalúa cada nodo para determinar si cumple con los requisitos específicos del Pod. Por ejemplo, el filtro PodFitsResources verifica si un nodo candidato tiene suficientes recursos disponibles para satisfacer las solicitudes de recursos del Pod. Después de este paso, la lista de nodos contiene solo aquellos que son adecuados para alojar el Pod; si la lista queda vacía, significa que el Pod no es programable en ese momento.\n\n¿Hay algo más en lo que pueda ayudarte?",
+    "actual_references": [
+      {
+        "documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+        "pagina": 4,
+        "seccion": "What's next",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Scheduling, Preemption and Eviction _ Kubernetes.pdf"
+      },
+      {
+        "documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+        "pagina": 64,
+        "seccion": "QueueSort",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Scheduling, Preemption and Eviction _ Kubernetes.pdf"
+      },
+      {
+        "documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+        "pagina": 4,
+        "seccion": "What's next",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Scheduling, Preemption and Eviction _ Kubernetes.pdf"
+      },
+      {
+        "documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+        "pagina": 3,
+        "seccion": "1 - Kubernetes Scheduler",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Scheduling, Preemption and Eviction _ Kubernetes.pdf"
+      },
+      {
+        "documento": "Scheduling, Preemption and Eviction _ Kubernetes.pdf",
+        "pagina": 62,
+        "seccion": "8 - Scheduling Framework",
+        "categoria": "manuales",
+        "source_path": "data\\pdf\\manuales\\Scheduling, Preemption and Eviction _ Kubernetes.pdf"
+      }
+    ],
+    "suggested_questions": [
+      "¿Qué tipos de filtros existen en el paso de filtrado de Kubernetes?",
+      "¿Cómo afecta el paso de filtrado al rendimiento del scheduler?",
+      "¿Qué sucede si ningún nodo pasa el filtrado para un Pod?",
+      "¿Cómo se configuran o personalizan los filtros en Kubernetes?"
     ],
     "status": "ok",
     "error": null

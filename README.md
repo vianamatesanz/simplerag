@@ -7,6 +7,11 @@ Este documento explica cómo:
 3. Lanzar pruebas con `tests/input.json`.
 4. Generar resultados en `tests/output.json` y evaluación en `tests/eval_report.json`.
 
+Los ficheros ya existentes en la carpeta tests incluyen la entrada y salida de una ejecución del notebook:
+1. En `tests/input.json` encontrará las preguntas, página, texto y categoría del documento donde encontrar la respuesta.
+2. En `tests/output.json` encontrará el resultado del proceso RAG
+3. Finalmente, `tests/eval_report.json` contiene el ejemplo de 10 preguntas con su análisis en deepeval con métricas predefinidas y un 'answer correctness' definido en el notebook.
+
 ## 1) Tecnologías usadas
 
 - ChromaDB:
